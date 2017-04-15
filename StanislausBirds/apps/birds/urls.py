@@ -1,3 +1,3 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
-from .views import 
+from .views import BirdList, BirdEntry

@@ -5,4 +5,5 @@ from django.apps import AppConfig
 
 
 class BirdsConfig(AppConfig):
-    name = 'Birds'
+    name = 'apps.birds'
+    verbose_name = 'Birds'

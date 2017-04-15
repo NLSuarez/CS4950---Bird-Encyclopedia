@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from apps.birds.models import Bird
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render_to_response
+from .models import Bird
 
 class BirdList(ListView):
     model = Bird
