@@ -24,6 +24,7 @@ source /path/to/virtualenv/folder/bin/activate #There is basically an executeabl
 # To make it easier on yourself, you can create an alias out of this command since
 # you'll have to run it every time you want to make changes to the django project or run it.
 pip install Django #ONLY when in the virtual environment.
+pip install Pillow
 
 4. Clone the github repository to a directory
 
