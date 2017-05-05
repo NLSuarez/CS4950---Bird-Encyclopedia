@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <header>
+      <div class="container" id="maincontent" tabindex="-1">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="intro-text">
+                      <h1 class="name">CS4590 Group 2 Project</h1>
+                      <img class="img-responsive" src="/static/img/duck.png" style = "display: block; margin-left: auto; margin-right: auto;">
+                      <hr class="star-light">
+                      <span class="skills">Stanislaus Bird Encyclopedia</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <br>
+<div class="container">
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+    <div class="col-md-5">
+      <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Search By Letter
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#LetterA">A</a></li>
+        <li><a href="#LetterB">B</a></li>
+        <li><a href="#LetterC">C</a></li>
+        <li><a href="#LetterD">D</a></li>
+        <li><a href="#LetterE">E</a></li>
+        <li><a href="#LetterF">F</a></li>
+        <li><a href="#LetterG">G</a></li>
+        <li><a href="#LetterH">H</a></li>
+        <li><a href="#LetterI">I</a></li>
+        <li><a href="#LetterJ">J</a></li>
+        <li><a href="#LetterK">K</a></li>
+        <li><a href="#LetterL">L</a></li>
+        <li><a href="#LetterM">M</a></li>
+        <li><a href="#LetterN">N</a></li>
+        <li><a href="#LetterO">O</a></li>
+        <li><a href="#LetterP">P</a></li>
+        <li><a href="#LetterQ">Q</a></li>
+        <li><a href="#LetterR">R</a></li>
+        <li><a href="#LetterS">S</a></li>
+        <li><a href="#LetterT">T</a></li>
+        <li><a href="#LetterU">U</a></li>
+        <li><a href="#LetterV">V</a></li>
+        <li><a href="#LetterW">W</a></li>
+        <li><a href="#LetterX">X</a></li>
+        <li><a href="#LetterY">Y</a></li>
+        <li><a href="#LetterZ">Z</a></li>
+      </ul>
+      </div>
+    </div>
+<div class="col-md-5">
+  <div class="search">
+    <form action="">
+      <input type="text" name="search" placeholder="Search here..." />
+      <input type="submit" value="Search" />
+    </form>
+  </div>
+</div>
+    <div class="col-md-1">
+    </div>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript">
+  $(document).ready() function () {
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  }
+</script>
+{% endblock %}
