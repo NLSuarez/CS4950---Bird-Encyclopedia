@@ -1,3 +1,5 @@
+#This file was used on python 2.7. It will not work if run in python 3.
+
 from __future__ import with_statement
 import csv
 from apps.birds.models import Bird
