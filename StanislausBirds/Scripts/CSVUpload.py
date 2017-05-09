@@ -17,6 +17,10 @@ def upload_csv():
             if row_num > 1:
                 new_bird = Bird()
                 new_bird.name = row[0]
+                #Take the name and replace spaces with -
+                hyphenatedSlug = "-".join(new_bird.name.split())
+                #Then take that string and remove all apostrophes
+                new_bird.slug = hyphenatedSlug.replace("\'", "")
                 new_bird.species = row[1]
                 new_bird.description = row[2]
                 #There are two fields that will never be filled out here, so skip them to row[5]
