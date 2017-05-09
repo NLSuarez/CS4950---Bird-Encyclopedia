@@ -16,13 +16,13 @@ def upload_csv():
         for row in birdreader:
             if row_num > 1:
                 new_bird = Bird()
-                new_bird.Name = row[0]
-                new_bird.Species = row[1]
-                new_bird.Description = row[2]
+                new_bird.name = row[0]
+                new_bird.species = row[1]
+                new_bird.description = row[2]
                 #There are two fields that will never be filled out here, so skip them to row[5]
-                new_bird.Diet = row[5]
-                new_bird.Sleep = row[6]
-                new_bird.Habitat = row[7]
+                new_bird.diet = row[5]
+                new_bird.sleep = row[6]
+                new_bird.habitat = row[7]
                 try:
                     new_bird.save()
                 except:
