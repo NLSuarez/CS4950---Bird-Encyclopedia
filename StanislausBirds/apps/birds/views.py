@@ -8,7 +8,7 @@ class BirdList(ListView):
     model = Bird
     template_name = 'birds/birds_list.html'
     queryset = Bird.objects.all()
-    paginate_by = 20
+   #paginate_by = 20
 
     def get_queryset(self):
         return self.queryset

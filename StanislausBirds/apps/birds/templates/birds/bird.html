@@ -2,7 +2,18 @@
 
 {% block content %}
 <p> Here is a bird. </p>
-{% endblock %}
+        </div>
+            <h2>{{ object.name }}</h2>
+            <p>{{ object.image}}</p>
+            <p>{{ object.description }}</p>
+            <p>{{ object.audio }}</p>
+            <p>{{ object.sleepingHabits }}</p>
+        </div>
+
+
+
+
+    {% endblock %}
 
 
 
@@ -30,4 +41,4 @@
 
 
 
-</html>
+    </html>

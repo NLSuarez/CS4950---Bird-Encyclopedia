@@ -1,6 +1,6 @@
 <!-- This template will not work as is. It is just an example of how we want
 the end format. -->
-{% block resultlist %}
+<!--{% block resultlist %}
   <section id="LetterA">
     <div>A</div>
     <ul>
@@ -8,4 +8,21 @@ the end format. -->
       <a href="#">Link2</a>
     </u>
   </section>
-{% endblock %}
+{% endblock %}-->
+
+{% for object in object_list %}
+
+</div>
+<a href="{{object.url}}">{{object.name}}</a><br>
+
+<!--<p>{{object.description }}</p>-->
+<!--<p>{{object.audio }}</p>-->
+</div>
+
+
+{% endfor %}
+
+
+
+
+
