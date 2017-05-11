@@ -1,44 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p> Here is a bird. </p>
-        </div>
-            <h2>{{ object.name }}</h2>
-            <p>{{ object.image}}</p>
-            <p>{{ object.description }}</p>
-            <p>{{ object.audio }}</p>
-            <p>{{ object.sleepingHabits }}</p>
-        </div>
+
+            <h2 align="center">{{ object.name }}</h2>
+            <p align="center">{{object.species}}</p>
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-2">
+                        <img src="{{ object.image.url}}" height="40" width="40">
+                    </div>
+                    <div class="col col-lg-2">
+                        <h3>Description</h3>
+                        <p>{{ object.description }}</p>
+                    </div>
+                </div>
+                <div>
+                    <p><audio controls><source src="{{object.sound.url}}" type="audio/mpeg"></audio></p>
+                    <h3>Diet</h3>
+                    <p>{{object.diet}}</p>
+                    <h3>Sleeping Habits</h3>
+                    <p>{{object.sleep}}</p>
+                    <h3>Habitat</h3>
+                    <p>{{object.habitat}}</p>
+                </div>
+
+{% endblock %}
 
 
-
-
-    {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </html>
+   
+                </html>
