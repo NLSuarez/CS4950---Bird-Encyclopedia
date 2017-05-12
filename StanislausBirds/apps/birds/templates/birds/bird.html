@@ -1,31 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-            <h2 align="center">{{ object.name }}</h2>
-            <p align="center">{{object.species}}</p>
             <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col col-lg-2">
-                        <img src="{{ object.image.url}}" height="40" width="40">
-                    </div>
-                    <div class="col col-lg-2">
+              <div class="row">
+                <div class="row">
+                  <div class="col-xs-11">
+                  </div>
+                  <div class="col-xs-1">
+                  <a class="btn btn-success" href="{% url 'BirdList' %}">Back?</a>
+                </div>
+                </div>
+                <h2 align="center">{{ object.name }}</h2>
+                <p align="center">{{object.species}}</p>
+              </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="col-xs-6">
                         <h3>Description</h3>
                         <p>{{ object.description }}</p>
+                        <h3>Diet</h3>
+                        <p>{{object.diet}}</p>
+                        <h3>Sleeping Habits</h3>
+                        <p>{{object.sleep}}</p>
+                        <h3>Habitat</h3>
+                        <p>{{object.habitat}}</p>
                     </div>
+                    <div class="col-xs-6">
+                        <img src="{{ object.image.url}}" class="img-responsive img-thumbnail">
+                        <audio controls style="margin-top:50px;"><source src="{{object.sound.url}}" type="audio/mpeg"></audio>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                    <p><audio controls><source src="{{object.sound.url}}" type="audio/mpeg"></audio></p>
-                    <h3>Diet</h3>
-                    <p>{{object.diet}}</p>
-                    <h3>Sleeping Habits</h3>
-                    <p>{{object.sleep}}</p>
-                    <h3>Habitat</h3>
-                    <p>{{object.habitat}}</p>
-                </div>
-
+              </div>
 {% endblock %}
-
-
-   
-                </html>

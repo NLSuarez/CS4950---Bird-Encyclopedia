@@ -1,25 +1,11 @@
-<!-- This template will not work as is. It is just an example of how we want
-the end format. -->
-<!--{% block resultlist %}
-  <section id="LetterA">
-    <div>A</div>
-    <ul>
-      <a href="#">Link1</a><br>
-      <a href="#">Link2</a>
-    </u>
-  </section>
-{% endblock %}-->
-
+{% extends 'index.html' %}
+{% block content %}
 {% for object in object_list %}
-
-</div>
-<a href="{{object.url}}">{{object.name}}</a><br>
-</div>
-
-
+  {% ifchanged object.name.0 %}
+  </ul>
+  <h3>{{object.name.0}}</h3>
+  <ul>
+  {% endifchanged %}
+  <li><a href="{{object.url}}">{{object.name}}</a></li>
 {% endfor %}
-
-
-
-
-
+{% endblock %}
