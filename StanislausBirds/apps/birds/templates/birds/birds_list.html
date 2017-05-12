@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% block content %}
+<div class='container'>
 {% for object in object_list %}
   {% ifchanged object.name.0 %}
   </ul>
@@ -8,4 +9,5 @@
   {% endifchanged %}
   <li><a href="{{object.url}}">{{object.name}}</a></li>
 {% endfor %}
+</div>
 {% endblock %}

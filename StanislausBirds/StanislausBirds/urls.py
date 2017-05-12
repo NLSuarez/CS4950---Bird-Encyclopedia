@@ -17,13 +17,17 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.views.generic import RedirectView
 
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    #url(r'^$', views.IndexView.as_view(), name='index'),
+    #Redirect to BirdList
+    url(r'^$', RedirectView.as_view(pattern_name='BirdList', permanent=False)),
+    #admin site
     url(r'^admin/', admin.site.urls),
     #includes
     url(r'^birds/', include('apps.birds.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-#Note to future self that this add is supposed to be unsafe for a production server
+#Note to future self that this add is unsafe for a production server
