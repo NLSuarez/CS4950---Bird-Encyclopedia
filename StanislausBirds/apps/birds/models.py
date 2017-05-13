@@ -25,7 +25,6 @@ class Bird(models.Model):
     #Leftover from python2 version of doing this
     #def __unicode__(self):
         #return u'{}'.format(self.Name)
-
     @property
     def url(self):
         url = reverse('BirdEntry', kwargs={'slug': self.slug})

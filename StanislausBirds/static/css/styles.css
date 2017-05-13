@@ -86,5 +86,6 @@ ul {
 }
 
 a {
-  color: green;
+  color: darkgreen;
+  text-decoration: underline;
 }
