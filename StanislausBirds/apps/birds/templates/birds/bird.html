@@ -26,8 +26,16 @@
                         <p>{{object.habitat}}</p>
                     </div>
                     <div class="col-xs-6">
-                        <img src="{{ object.image.url}}" class="img-responsive img-thumbnail">
-                        <audio controls style="margin-top:50px;"><source src="{{object.sound.url}}" type="audio/mpeg"></audio>
+                        {% if object.image %}
+                          <img src="{{ object.image.url}}" alt="birdpicture" class="img-responsive img-thumbnail">
+                        {% else %}
+                          <h3>No image</h3>
+                        {% endif %}
+                        {% if object.sound %}
+                          <audio controls style="margin-top:50px;"><source src="{{object.sound.url}}" type="audio/mpeg"></audio>
+                        {% else %}
+                          <h3>No sound</h3>
+                        {% endif %}
                     </div>
                   </div>
                 </div>
