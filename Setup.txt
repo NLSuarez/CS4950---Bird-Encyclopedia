@@ -1,45 +1,31 @@
-This isn't a script file, but it will list some important commands/steps you should do after setting up your linux, virtual box.
+This isn't a script file. This describes how to get the project running on a Windows machine.
 
-1. Install guest additions
-	This one is the only step outside the console and is required to make sure your system will work properly. While inside your linux box, locate the devices menu up top. The very bottom option will be Insert Guest Additions CD Image. Click it, install and restart. Then eject the cd after the restart by right clicking it on the lefthand-side toolbar.
+1. Install python version 3 for windows.
+2. Install virtualenvwrapper-win with pip on the terminal(pip install virtualenvwrapper-win)
+3. While still in the terminal, make your virtual environment and install necessary software within it
+	mkvirtualenv myproject
+	pip install django
+	pip install Pillow
+	
+4. Install git for windows(make sure to download the desktop version and not mobile)
+5. Clone the github repository to a directory
 
-2. Run update commands and install git
-
-sudo -i #Will require you to enter your account's password.
-sudo apt-get update
-sudo apt-get upgrade #Will ask to confirm. Just type y to accept.
-sudo apt-get install git #confirm
-
-3. Install necessary software with commands in this order
-
-sudo apt-get install python-pip
-pip install --upgrade pip #may not be necessary, but just do this to check that you're up to date
-sudo pip install virtualenv
-pip freeze #check to see that virtualenv actually installed
-#BEFORE CONTINUING, navigate to a directory that you will store your virtual environment folder #in. Make sure it's something that will only be used for the virtual environments as there will be #a lot of gibberish files you don't otherwise need to look at.
-virtualenv CS4950 #name after virtualenv is actually the name of the environment that you can #customize
-source /path/to/virtualenv/folder/bin/activate #There is basically an executeable in the bin folder
-#of your virtualenv directory, so you activate that with the command source. Your prompt will 
-# change when you do this to include the environment name in parentheses on the left hand side. 
-# To make it easier on yourself, you can create an alias out of this command since
-# you'll have to run it every time you want to make changes to the django project or run it.
-pip install Django #ONLY when in the virtual environment.
-pip install Pillow
-
-4. Clone the github repository to a directory
-
-First, navigate to a directory you wish to store your github repositories in. Then type the following command:
+First, navigate to a directory you wish to store your github repositories in with the terminal. 
+Then type the following command:
 git clone https://github.com/Ssuarez0/CS4950GroupProject.git
+
+6. Use the "deactivate" command while in the terminal.
 
 Boom. You now have a copy of our project on your system.
 
 Steps to do every time working with this setup:
-1. source /path/to/virtualenv/folder/bin/activate
+1. workon myproject
 2. cd /path/to/project/directory
 3. git pull origin master
 4. Do whatever django stuff you need to.
 5. When done:
-	a. If you made changes, add any new files with "git add <filepath>" and commit changes with "git commit -a". Then use "git push origin master".
+	a. If you made changes, add any new files with "git add <filepath>" and commit changes with "git commit -a". 
+		Then use "git push origin master".
 	b. After step a, or if you simply didn't make any changes, type "deactivate"
 
 
